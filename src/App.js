@@ -31,7 +31,7 @@ class Content extends Component{
     return(
       <article>
         <h2>HTML</h2>
-        HTML is HyperText Markup Language...!
+        HTML is HyperText Markup Language...!!
       </article>
     );
   }
