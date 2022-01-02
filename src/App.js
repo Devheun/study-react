@@ -4,6 +4,7 @@ import './App.css';
 import Wrapper from './Wrapper';
 import Counter from './Counter'
 import InputSample from './InputSample'
+import UserList from './UserList'
 
 function App(){
   {/*
@@ -18,7 +19,8 @@ function App(){
 
   return(
     
-    <InputSample />
+    <UserList />
+    //<InputSample />
     //<Counter/>
     //<Wrapper>
       //<Hello name="react" color="red" isSpecial ={true}/>
