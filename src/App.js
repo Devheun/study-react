@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import Hello from './Hello';
 import './App.css';
 import Wrapper from './Wrapper';
@@ -7,7 +7,24 @@ import InputSample from './InputSample'
 import UserList from './UserList'
 
 function App(){
-  {/*
+  const users=[
+    {
+        id:1,
+        username:'siheun',
+        email : 'siheun@naver.com'
+    },
+    {
+        id:2,
+        username:'tebin',
+        email:'tebin@naver.com'
+    },
+    {
+        id:3,
+        username:'fiers',
+        email:'fiers@naver.com'
+    }
+  ];
+  {/* 
   const name = 'react';
   const style={
     backgroundColor : 'black',
@@ -15,11 +32,14 @@ function App(){
     fontSize : 24,
     padding : '1rem'
   */}
-
+  const nextId=useRef(4);
+  const onCreate=()=>{
+    nextId.current+=1;
+  }
 
   return(
     
-    <UserList />
+    <UserList users={users}/>
     //<InputSample />
     //<Counter/>
     //<Wrapper>
