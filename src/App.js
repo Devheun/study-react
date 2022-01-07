@@ -65,10 +65,14 @@ function App(){
     nextId.current+=1;
   }
 
+  const onRemove= (id)=>{ //user.id 가 id인 것을 제거하여 새로운 배열 만듦
+    setUsers(users.filter(user=>user.id!==id));
+  };
+
   return(
     <>
     <CreateUser username={username} email={email} onChange={onChange} onCreate={onCreate}/>
-    <UserList users={users}/>
+    <UserList users={users} onRemove={onRemove}/>
     </>
     //<InputSample />
     //<Counter/>
